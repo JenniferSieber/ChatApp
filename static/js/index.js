@@ -27,8 +27,6 @@ socketio.on("message", (data) => {
   createMessage(data.name, data.message, data.date_created);
 });
 
-// const bannedWords = ["fuck", "shit", "sex"];  // Add more banned words as needed
-
 const sanitizeInput = (input) => {
   // Escape HTML and template syntax
   let sanitized = input
@@ -39,7 +37,7 @@ const sanitizeInput = (input) => {
     .replace(/{%/g, "&#123;%")
     .replace(/%}/g, "%&#125;");
 
-  // Replace banned words
+  // Replace anned words with '****'
   bannedWords.forEach(word => {
     const regex = new RegExp(`\\b${word}\\b`, 'gi');
     sanitized = sanitized.replace(regex, '****');
