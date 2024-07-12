@@ -1,3 +1,15 @@
 # DragonChat App
 
-Python, Flask, Flask-SocketIO, Vanilla JavaScript, Vanilla CSS, HTML
+Python
+
+Flask
+
+Flask-SocketIO
+
+JavaScript
+
+Vanilla
+
+CSS
+
+HTML
