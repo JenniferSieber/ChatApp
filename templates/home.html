@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-container">
+  <header>
+    <h2 class="center">Chatroom Entrance:</h2>
+    <p>Create a new Chatroom or</p>
+    <p>Enter an existing Chatroom with the code!</p>
+  </header>
+  <form method="post" class="buttons">
+    <div class="username">
+      <!-- <label>Name:</label> -->
+      <input 
+        type="text" 
+        placeholder="Type your Chatroom nametag" 
+        name="name"
+        value="{{name}}"
+        required
+      />
+    </div>
+    <div class="join">
+      <input 
+        type="text"
+        placeholder="Enter room code to enter existing Chatroom" 
+        name="code"
+        value="{{code}}"
+      />
+
+      <div class="room-choice">
+        <button type="submit" name="create" class="create-btn">
+          Create a New Room
+        </button>
+        <button type="submit" name="join">
+          Join Existing Room
+        </button>
+      </div>     
+    </div>
+   
+    <!-- Message for Form Errors -->
+    {% if error %}
+      <ul class="error-msg-container">
+        <li class="error-msg">{{error}}</li>
+      </ul>
+    {% endif %}
+  </form>
+</div>
+{% endblock %}
