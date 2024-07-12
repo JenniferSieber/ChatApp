@@ -8,6 +8,7 @@
   </header>
   <form method="post" class="buttons">
     <div class="username">
+      <!-- <label>Name:</label> -->
       <input 
         type="text" 
         placeholder="Type your Chatroom nametag" 
@@ -25,29 +26,35 @@
       />
 
       <div class="room-choice">
-        <button type="submit" name="create" class="create-btn">
+        <button type="submit" name="create" class="create-btn" title="Create a Chatroom">
           Create a New Room
         </button>
-        <button type="submit" name="join">
+        <button type="submit" name="join" title="Join an existing Chatroom">
           Join Existing Room
         </button>
       </div>     
     </div>
-    <!-- Message for Form Form-Success or Errors -->
+
+    <!-- Message for Form Errors -->
     {% if error %}
       <ul class="error-msg-container">
         <li class="error-msg">{{error}}</li>
       </ul>
-    {% endif %} 
+      {% else %}
+      <ul class="error-msg-container">
+        <li class="error-msg"></li>
+      </ul>
+    {% endif %}
   </form>
-  <footer title="Refresh this page" class="refresh-footer">
-        <span>Connect with Friends! Share your Chatroom Code with Others!</span>
-        <div class="refresh-link" title="Refresh this Page">
-          <a href="{{ url_for('home') }}">
-              <div class="refresh-icon"><i class="fas fa-dragon"></i></div>
-              <div class="refresh-text">Leave this Chatroom...</div>
-          </a>
-        </div>
-    </footer>
+
+  <footer title="Refresh Page">
+    <div class="refresh-link">
+      <a href="{{ url_for('home') }}">
+        <div><i class="fas fa-dragon"></i></div>
+        <div class="refresh-text text">Refresh this Page</div>
+      </a> 
+    </div>
+    <h3>Connect with Friends! Share your Chatroom Code with Others!</h3>
+  </footer>
 </div>
 {% endblock %}
