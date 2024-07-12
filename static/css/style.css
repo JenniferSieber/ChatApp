@@ -31,7 +31,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   height: 90vh;
   width: 90vw;
   margin-left: 10px;
@@ -148,8 +148,9 @@ form {
 .form-container {
   background: var(--white-smoke);
   padding: 30px;
-  height: 70vh;
+  height: 80%;
   width: 80%;
+  margin-top: 20px;
 }
 
 .create-btn {
@@ -185,6 +186,7 @@ form {
   flex: 1;
   width: 100%;
   background: var(--white-smoke);
+  color: var(--primary-color);
   padding-top: 10px;
   box-shadow: var(--box-shadow);
 }
@@ -203,7 +205,7 @@ form {
 }
 
 .muted {
-  color: var(--light-color);
+  color: var(--highlight-color);
   font-size: 1.3rem;
 }
 
@@ -214,7 +216,7 @@ form {
 }
 
 .send-btn {
-  width: 100%;
+  width: 98%;
   font-size: 2rem;
   background: var(--dark-color);
   padding: 10px;
@@ -229,21 +231,45 @@ form {
   margin-right: 10px;
 }
 
-.leave {
+footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+footer h3 {
+  font-size: 1.3rem;
+  color: var(--dark-color);
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 20px;
 }
 
-.leave-icon {
+footer a {
+  margin-top: 10px;
+}
+
+footer i {
   font-size: 3rem;
 }
 
-.leave-text {
+footer a .text {
   font-family: monospace;
   font-size: 1.8rem;
+}
+
+.refresh-text {
+  color: var(--primary-color);
+}
+
+.leave-text {
   color: var(--white-smoke);
+}
+
+.refresh-link a:hover {
+  color: var(--primary-color);
 }
 
 .leave-link a:hover {
