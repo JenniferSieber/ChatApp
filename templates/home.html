@@ -33,13 +33,19 @@
         </button>
       </div>     
     </div>
-   
+    
+    <footer class="home-footer">
     <!-- Message for Form Errors -->
     {% if error %}
       <ul class="error-msg-container">
         <li class="error-msg">{{error}}</li>
       </ul>
-    {% endif %}
+    {% else %}
+      <ul class="success-msg-container">
+        <li class="success-msg"> Successfully joining Chatroom: {{{{code}}</li>
+      </ul>
+    {% endif %} 
+    </footer>
   </form>
 </div>
 {% endblock %}
