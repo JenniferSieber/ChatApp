@@ -106,6 +106,5 @@ def disconnect():
     send({'name': name, 'message': 'has left the room', 'date_created':date_created}, to=room)
     print(f'{name} has left the chatroom: {room}')
 
-
 if __name__ == '__main__':
     socketio.run(app, debug=True)
