@@ -5,7 +5,7 @@ from string import ascii_uppercase
 from datetime import datetime
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = 'notforproduction'
+app.config['SECRET_KEY'] = 'notforproduction'
 socketio = SocketIO(app)
 
 rooms = {}
