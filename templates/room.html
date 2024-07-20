@@ -31,14 +31,14 @@
 
     <footer title="Leave this Chatroom" class="leave">
       <div class="leave-link" title="Leave this Chatroom">
-      <a href="{{ url_for('home') }}">
-          <div class="leave-icon"><i class="fas fa-dragon"></i></div>
-          <div class="leave-text">Leave this Chatroom...</div>
-      </a>
-    </div>
+        <a href="{{ url_for('home') }}">
+            <div class="leave-icon"><i class="fas fa-dragon"></i></div>
+            <div class="leave-text">Leave this Chatroom...</div>
+        </a>
+      </div>
     </footer>
+    
   </div>
-
   {% for msg in messages %}
   <script type="text/javascript">
     createMessage('{{msg.name}}', '{{msg.message}}', '{{msg.date_created}}')
