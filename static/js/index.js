@@ -42,7 +42,6 @@ const sanitizeInput = (input) => {
     const regex = new RegExp(`\\b${word}\\b`, 'gi');
     sanitized = sanitized.replace(regex, '****');
   });
-
   return sanitized;
 };
 
