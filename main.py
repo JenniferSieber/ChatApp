@@ -9,6 +9,7 @@ app.config['SECRET_KEY'] = 'notforproduction'
 socketio = SocketIO(app)
 
 rooms = {}
+tets = {}
 
 def generate_unique_code(length):
     while True:
